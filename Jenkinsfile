@@ -27,7 +27,7 @@ pipeline {
    post {
         always {
             archiveArtifacts artifacts: 'dist/**/*.tar.gz', fingerprint: true
-           
+            junit 'build/reports/**/*.xml'
         }
     }
 }
