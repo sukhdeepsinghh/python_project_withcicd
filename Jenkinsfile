@@ -24,5 +24,11 @@ pipeline {
 
 
     }
+   post {
+        always {
+            archiveArtifacts artifacts: '/opt/jenkins/workspace/python-pipeline123/dist/**/*.tar.gz', fingerprint: true
+            junit 'build/reports/**/*.xml'
+        }
+    }
 }
 
