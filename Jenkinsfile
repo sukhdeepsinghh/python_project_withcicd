@@ -15,6 +15,13 @@ pipeline {
                 sh 'bash start.sh'
             }
         }
+   stage('Creating_artifacts') {
+            steps {
+                sh 'chmod +x artifact.sh'
+                sh 'bash artifact.sh'
+            }
+        }
+
 
     }
 }
